@@ -1,0 +1,32 @@
+/* static/css/styles.css */
+
+/* Стили для навигационной панели */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Стили для ссылок на панели */
+.navbar .navbar-nav .nav-link {
+    color: #fff !important;
+    padding: 10px 15px;
+    font-weight: 600;
+}
+
+/* Эффект при наведении на ссылки */
+.navbar .navbar-nav .nav-link:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Стили для логотипа */
+.navbar .navbar-brand {
+    color: #fff !important;
+    font-weight: 700;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+    .navbar-nav {
+        margin-top: 10px;
+    }
+}

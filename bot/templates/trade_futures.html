@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Торговля фьючерсами</title>
+</head>
+<body>
+    <h1>Создать ордер на Bybit</h1>
+
+    {% if message %}
+        <p><strong>{{ message }}</strong></p>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <label>API Key:</label><br>
+        <input type="text" name="api_key" required><br><br>
+
+        <label>API Secret:</label><br>
+        <input type="password" name="api_secret" required><br><br>
+
+        <label>Пара (например BTCUSDT):</label><br>
+        <input type="text" name="symbol" required><br><br>
+
+        <label>Количество:</label><br>
+        <input type="number" name="quantity" step="0.001" required><br><br>
+
+        <label>Тип ордера:</label><br>
+        <select name="order_type">
+            <option value="Market">Market</option>
+            <option value="Limit">Limit</option>
+        </select><br><br>
+
+        <button type="submit">Отправить ордер</button>
+    </form>
+</body>
+</html>
+

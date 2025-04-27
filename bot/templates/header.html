@@ -1,0 +1,83 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Домашняя страница</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Главная</a>
+        </li>
+
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="/profile/">Профиль ({{ user.username }})</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/orders/">Заказы</a>
+          </li>
+
+          {# Проверка: есть ли API ключ #}
+          {% if user.apikey_set.exists %}
+            <li class="nav-item">
+              <span class="nav-link text-success">API ключ добавлен ✅</span>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="{% url 'add_api_key' %}">Добавить API ключ</a>
+            </li>
+          {% endif %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="/logout/">Выйти</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/login/">Войти</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup/">Регистрация</a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Вставляем сообщения сразу после навбара -->
+{% if messages %}
+  <div class="container mt-3">
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if messages %}
+  <div class="container mt-3">
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+      </div>
+    {% endfor %}
+  </div>
+
+  <script>
+    // Ждём 3 секунды, потом плавно скрываем все алерты
+    setTimeout(function() {
+      var alerts = document.querySelectorAll('.alert');
+      alerts.forEach(function(alert) {
+        var bsAlert = new bootstrap.Alert(alert);
+        bsAlert.close();
+      });
+    }, 3000); // 3000 миллисекунд = 3 секунды
+  </script>
+{% endif %}
+
+

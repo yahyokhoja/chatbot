@@ -1,0 +1,20 @@
+<!-- В файле templates/login.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+</head>
+<body>
+      {% include "header.html" %}
+
+    <h1>Форма входа</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <!-- Форма входа -->
+        <input type="text" name="username" placeholder="Имя пользователя" required>
+        <input type="password" name="password" placeholder="Пароль" required>
+        <button type="submit">Войти</button>
+    </form>
+</body>
+</html>
