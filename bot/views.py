@@ -5,10 +5,19 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.views.decorators.http import require_POST
+from .models import APIKey, Order  # Добавляем импорт модели Order
+
 
 from .forms import APIKeyForm
 from .models import APIKey
 from .bybit_api import make_bybit_request
+
+
+@login_required
+def orders(request):
+    user_orders = Order.objects.filter(user=request.user)
+    return render(request, 'orders.html', {'orders': user_orders})
+
 
 # ============================== #
 # Основные страницы

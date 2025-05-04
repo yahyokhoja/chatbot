@@ -7263,3 +7263,298 @@ Traceback (most recent call last):
   File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 914, in _resolve_lookup
     raise VariableDoesNotExist(
 django.template.base.VariableDoesNotExist: Failed lookup for key [price] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7e3de96bc4c0>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7e3de96d1540>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7e3de96d1540>>), 'messages': <SessionStorage: request=<WSGIRequest: GET '/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {}]
+[2025-05-04 09:32:11,921] DEBUG django.db.backends: (0.006) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+[2025-05-04 09:32:11,927] DEBUG django.db.backends: (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2025-05-04 09:40:55,231] DEBUG django.template: Exception while resolving variable 'price' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [price] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x78743f67e5f0>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x78743f685bd0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x78743f685bd0>>), 'messages': <SessionStorage: request=<WSGIRequest: GET '/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {}]
+[2025-05-04 09:40:57,506] DEBUG django.template: Exception while resolving variable 'price' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [price] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x78743f67f6d0>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x78743f6a4310>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x78743f6a4310>>), 'messages': <SessionStorage: request=<WSGIRequest: GET '/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {}]
+[2025-05-04 09:40:57,990] DEBUG django.template: Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    callback, callback_args, callback_kwargs = self.resolve_request(request)
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 313, in resolve_request
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 702, in resolve
+    raise Resolver404({"tried": tried, "path": new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLResolver <module 'bot.urls' from '/home/yahuokhoja/chatbot/bot/urls.py'> (None:None) ''>, <URLPattern '' [name='index']>], [<URLResolver <module 'bot.urls' from '/home/yahuokhoja/chatbot/bot/urls.py'> (None:None) ''>, <URLPattern 'login/' [name='login']>], [<URLResolver <module 'bot.urls' from '/home/yahuokhoja/chatbot/bot/urls.py'> (None:None) ''>, <URLPattern 'signup/' [name='signup']>], [<URLResolver <module 'bot.urls' from '/home/yahuokhoja/chatbot/bot/urls.py'> (None:None) ''>, <URLPattern 'profile/' [name='profile']>], [<URLResolver <module 'bot.urls' from '/home/yahuokhoja/chatbot/bot/urls.py'> (None:None) ''>, <URLPattern 'orders/' [name='orders']>], [<URLResolver <module 'bot.urls' from '/home/yahuokhoja/chatbot/bot/urls.py'> (None:None) ''>, <URLPattern 'logout/' [name='logout']>], [<URLResolver <module 'bot.urls' from '/home/yahuokhoja/chatbot/bot/urls.py'> (None:None) ''>, <URLPattern 'narh/' [name='narh']>], [<URLResolver <module 'bot.urls' from '/home/yahuokhoja/chatbot/bot/urls.py'> (None:None) ''>, <URLPattern 'add-api-key/' [name='add_api_key']>], [<URLResolver <module 'bot.urls' from '/home/yahuokhoja/chatbot/bot/urls.py'> (None:None) ''>, <URLPattern 'some-protected-view/' [name='some_protected_view']>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+[2025-05-04 09:40:57,997] WARNING django.request: Not Found: /favicon.ico
+[2025-05-04 09:41:05,202] DEBUG django.template: Exception while resolving variable 'price' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [price] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x78743f6b8dc0>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x78743f6a46a0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x78743f6a46a0>>), 'messages': <SessionStorage: request=<WSGIRequest: GET '/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {}]
+[2025-05-04 09:41:08,142] DEBUG django.template: Exception while resolving variable 'price' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [price] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x78743f6bbc70>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x78743f6a5fc0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x78743f6a5fc0>>), 'messages': <SessionStorage: request=<WSGIRequest: GET '/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {}]
+[2025-05-04 09:41:29,662] DEBUG django.template: Exception while resolving variable 'price' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [price] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x78743f71d5a0>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x78743f6a6b90>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x78743f6a6b90>>), 'messages': <SessionStorage: request=<WSGIRequest: GET '/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {}]
+ NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "api_key" BLOB NOT NULL); args=None; alias=default
+[2025-05-04 09:41:50,339] DEBUG django.db.backends.schema: INSERT INTO "new__bot_apikey" ("id", "api_secret", "user_id", "api_key") SELECT "id", "api_secret", "user_id", "api_key" FROM "bot_apikey"; (params ())
+[2025-05-04 09:41:50,340] DEBUG django.db.backends: (0.001) INSERT INTO "new__bot_apikey" ("id", "api_secret", "user_id", "api_key") SELECT "id", "api_secret", "user_id", "api_key" FROM "bot_apikey"; args=(); alias=default
+[2025-05-04 09:41:50,340] DEBUG django.db.backends.schema: DROP TABLE "bot_apikey"; (params ())
+[2025-05-04 09:41:50,341] DEBUG django.db.backends: (0.000) DROP TABLE "bot_apikey"; args=(); alias=default
+[2025-05-04 09:41:50,341] DEBUG django.db.backends.schema: ALTER TABLE "new__bot_apikey" RENAME TO "bot_apikey"; (params ())
+[2025-05-04 09:41:50,342] DEBUG django.db.backends: (0.001) ALTER TABLE "new__bot_apikey" RENAME TO "bot_apikey"; args=(); alias=default
+[2025-05-04 09:41:50,342] DEBUG django.db.backends.schema: CREATE INDEX "bot_apikey_user_id_e0914d04" ON "bot_apikey" ("user_id"); (params ())
+[2025-05-04 09:41:50,342] DEBUG django.db.backends: (0.000) CREATE INDEX "bot_apikey_user_id_e0914d04" ON "bot_apikey" ("user_id"); args=(); alias=default
+[2025-05-04 09:41:50,349] DEBUG django.db.backends.schema: CREATE TABLE "new__bot_apikey" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "api_key" BLOB NOT NULL, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "api_secret" BLOB NOT NULL); (params None)
+[2025-05-04 09:41:50,349] DEBUG django.db.backends: (0.000) CREATE TABLE "new__bot_apikey" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "api_key" BLOB NOT NULL, "user_id" integer NOT NULL REFERENCES "auth_user" ("id") DEFERRABLE INITIALLY DEFERRED, "api_secret" BLOB NOT NULL); args=None; alias=default
+[2025-05-04 09:41:50,349] DEBUG django.db.backends.schema: INSERT INTO "new__bot_apikey" ("id", "api_key", "user_id", "api_secret") SELECT "id", "api_key", "user_id", "api_secret" FROM "bot_apikey"; (params ())
+[2025-05-04 09:41:50,350] DEBUG django.db.backends: (0.000) INSERT INTO "new__bot_apikey" ("id", "api_key", "user_id", "api_secret") SELECT "id", "api_key", "user_id", "api_secret" FROM "bot_apikey"; args=(); alias=default
+[2025-05-04 09:41:50,350] DEBUG django.db.backends.schema: DROP TABLE "bot_apikey"; (params ())
+[2025-05-04 09:41:50,350] DEBUG django.db.backends: (0.000) DROP TABLE "bot_apikey"; args=(); alias=default
+[2025-05-04 09:41:50,350] DEBUG django.db.backends.schema: ALTER TABLE "new__bot_apikey" RENAME TO "bot_apikey"; (params ())
+[2025-05-04 09:41:50,351] DEBUG django.db.backends: (0.001) ALTER TABLE "new__bot_apikey" RENAME TO "bot_apikey"; args=(); alias=default
+[2025-05-04 09:41:50,351] DEBUG django.db.backends.schema: CREATE INDEX "bot_apikey_user_id_e0914d04" ON "bot_apikey" ("user_id"); (params ())
+[2025-05-04 09:41:50,351] DEBUG django.db.backends: (0.000) CREATE INDEX "bot_apikey_user_id_e0914d04" ON "bot_apikey" ("user_id"); args=(); alias=default
+[2025-05-04 09:41:50,351] DEBUG django.db.backends: (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+[2025-05-04 09:41:50,352] DEBUG django.db.backends: (0.000) INSERT INTO "django_migrations" ("app", "name", "applied") VALUES ('bot', '0004_alter_apikey_api_key_alter_apikey_api_secret', '2025-05-04 09:41:50.351819'); args=['bot', '0004_alter_apikey_api_key_alter_apikey_api_secret', '2025-05-04 09:41:50.351819']; alias=default
+[2025-05-04 09:41:50,354] DEBUG django.db.backends: (0.002) PRAGMA foreign_key_check; args=None; alias=default
+[2025-05-04 09:41:50,373] DEBUG django.db.backends: (0.019) COMMIT; args=None; alias=default
+[2025-05-04 09:41:50,373] DEBUG django.db.backends: (0.000) PRAGMA foreign_keys = ON; args=None; alias=default
+[2025-05-04 09:41:50,375] DEBUG django.db.backends: (0.002) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None; alias=default
+[2025-05-04 09:41:50,378] DEBUG django.db.backends: (0.002) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+[2025-05-04 09:41:50,388] DEBUG django.db.backends: (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2025-05-04 09:41:50,390] DEBUG django.db.backends: (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'admin' AND "django_content_type"."model" = 'logentry') LIMIT 21; args=('admin', 'logentry'); alias=default
+[2025-05-04 09:41:50,395] DEBUG django.db.backends: (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,); alias=default
+[2025-05-04 09:41:50,397] DEBUG django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',); alias=default
+[2025-05-04 09:41:50,399] DEBUG django.db.backends: (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2025-05-04 09:41:50,402] DEBUG django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'permission') LIMIT 21; args=('auth', 'permission'); alias=default
+[2025-05-04 09:41:50,404] DEBUG django.db.backends: (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'group') LIMIT 21; args=('auth', 'group'); alias=default
+[2025-05-04 09:41:50,407] DEBUG django.db.backends: (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'auth' AND "django_content_type"."model" = 'user') LIMIT 21; args=('auth', 'user'); alias=default
+[2025-05-04 09:41:50,410] DEBUG django.db.backends: (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4); alias=default
+[2025-05-04 09:41:50,413] DEBUG django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',); alias=default
+[2025-05-04 09:41:50,415] DEBUG django.db.backends: (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2025-05-04 09:41:50,417] DEBUG django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'contenttypes' AND "django_content_type"."model" = 'contenttype') LIMIT 21; args=('contenttypes', 'contenttype'); alias=default
+[2025-05-04 09:41:50,420] DEBUG django.db.backends: (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,); alias=default
+[2025-05-04 09:41:50,423] DEBUG django.db.backends: (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',); alias=default
+[2025-05-04 09:41:50,425] DEBUG django.db.backends: (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2025-05-04 09:41:50,427] DEBUG django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'sessions' AND "django_content_type"."model" = 'session') LIMIT 21; args=('sessions', 'session'); alias=default
+[2025-05-04 09:41:50,430] DEBUG django.db.backends: (0.002) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,); alias=default
+[2025-05-04 09:41:50,433] DEBUG django.db.backends: (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',); alias=default
+[2025-05-04 09:41:50,435] DEBUG django.db.backends: (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'bot'; args=('bot',); alias=default
+[2025-05-04 09:41:50,438] DEBUG django.db.backends: (0.002) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."app_label" = 'bot' AND "django_content_type"."model" = 'apikey') LIMIT 21; args=('bot', 'apikey'); alias=default
+[2025-05-04 09:41:50,441] DEBUG django.db.backends: (0.001) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (9) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(9,); alias=default
+[2025-05-04 09:41:50,443] DEBUG django.db.backends: (0.001) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'bot'; args=('bot',); alias=default
+[2025-05-04 09:42:25,788] DEBUG django.template: Exception while resolving variable 'price' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [price] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7ca6130125f0>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7ca61301dba0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7ca61301dba0>>), 'messages': <SessionStorage: request=<WSGIRequest: GET '/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {}]
+[2025-05-04 09:42:27,742] DEBUG django.template: Exception while resolving variable 'price' in template 'index.html'.
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 880, in _resolve_lookup
+    current = current[bit]
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+AttributeError: type object 'RequestContext' has no attribute 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/yahuokhoja/venv/lib/python3.10/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [price] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7ca6130136d0>>, 'request': <WSGIRequest: GET '/'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7ca6130402e0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7ca6130402e0>>), 'messages': <SessionStorage: request=<WSGIRequest: GET '/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {}]
